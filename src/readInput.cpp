@@ -51,10 +51,8 @@ TMInput readinput(){
       */
       return TMInput{number_of_states,alphabet_size,number_of_iterations,stM};
     }
-    else{
-        throw std::runtime_error("Wrong input passed by echo: \n try RuleMatrix alphabet state number_iterations");
-    }
   }
+    throw std::runtime_error("Wrong input passed by echo, try: echo \"RuleMatrix alphabet state number_iterations\" | ./rtm");
 }
 
 unsigned int parse_input_parameters(std::string optarg){
