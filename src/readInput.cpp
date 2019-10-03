@@ -31,7 +31,6 @@ TMInput readinput(){
 
   while (std::getline(std::cin,line))
   {
-    std::string delimiter = " ";
     std::istringstream iss(line);
     std::vector<std::string> parameters(std::istream_iterator<std::string>{iss},
                                  std::istream_iterator<std::string>());
@@ -100,8 +99,9 @@ StateMatrix splitString(const std::string& str, int splitLength, unsigned int nu
         unsigned int w = tuple[0] - '0';
         unsigned int m = tuple[1] - '0';
         unsigned int s = tuple[2] - '0';
-        bool test =w < alphabet_size && m<=2 && s<number_of_states;
+        bool test = (w < alphabet_size) && (m<3) && (s<number_of_states);
         if (!test){
+            std::cout << alphabet_size << " , " << number_of_states <<std::endl;
             fprintf (stderr,"Invalid input string of TM State Matrix in tuple : %s\n ", tuple.c_str());
             exit(0);
         }
