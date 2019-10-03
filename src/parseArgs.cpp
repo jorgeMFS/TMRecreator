@@ -66,11 +66,13 @@ bool parseArgs (int argc, char **argv){
             std::cout << "-----------------------------------------------------------------------------" << std::endl;
             std::cout <<"Recreate specific tm and print tape after x iterations" << std::endl;
             std::cout << "-----------------------------------------------------------------------------" << std::endl;
-            std::cout << "echo String | ./rtm" << std::endl;
-            std::cout << "echo String | ./rtm" << std::endl;
+            std::cout << "Print stMatrix of the tm:" << std::endl;
+            std::cout << "echo \"StateMatrix numberOfStates alphabetSize numberOfIterations\"| ./rtm"<< std::endl;
+            std::cout << "echo \"120111111111 2 2 31\" | ./rtm" << std::endl;
             std::cout << "-----------------------------------------------------------------------------" << std::endl;
             std::cout <<"Print stMatrix of the tm" << std::endl;
-            std::cout << "echo String | ./rtm --stMatrix"<< std::endl << std::endl;
+            std::cout << "echo \"StateMatrix numberOfStates alphabetSize numberOfIterations\"| ./rtm --stMatrix"<< std::endl;
+            std::cout << "echo \"120111111111 2 2 31\" | ./rtm --stMatrix" << std::endl; 
             exit (0);
 
         case 'v':

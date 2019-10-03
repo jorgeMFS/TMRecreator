@@ -35,15 +35,15 @@ Arguments to set flags:
 -----------------------------------------------------------------------------
 Examples:
 -----------------------------------------------------------------------------
-Recreate specific tm and print tape after x iterations
+Recreate specific tm and print tape after x iterations:
 -----------------------------------------------------------------------------
-echo "StateMatrix alphabetSize numberOfStates numberOfIterations" | ./rtm
+echo "StateMatrix numberOfStates alphabetSize numberOfIterations" | ./rtm
 echo "120111111111 2 2 31" | ./rtm
 
 -----------------------------------------------------------------------------
-Print stMatrix of the tm
-echo String | ./rtm --stMatrix
-echo "StateMatrix alphabetSize numberOfStates numberOfIterations"| ./rtm
+Print stMatrix of the tm:
+echo "StateMatrix numberOfStates alphabetSize numberOfIterations"| ./rtm
+echo "120111111111 2 2 31" | ./rtm
 ```
 
 
